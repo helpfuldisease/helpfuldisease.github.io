@@ -262,6 +262,7 @@
 
     .work-copy p,
     .service p,
+    .capability p,
     .process p,
     .resume p,
     .closing p {
@@ -275,17 +276,34 @@
       gap: 18px;
     }
 
+    .capability-grid {
+      margin-top: 44px;
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 18px 26px;
+    }
+
     .service {
       padding-top: 20px;
       border-top: 1px solid var(--line);
     }
 
+    .capability {
+      padding: 18px 0 0;
+      border-top: 1px solid var(--line);
+    }
+
     .service h3,
+    .capability h3,
     .process h3 {
       font-family: Inter, ui-sans-serif, system-ui, sans-serif;
       font-size: 18px;
       font-weight: 500;
       line-height: 1.25;
+    }
+
+    .capability h3 {
+      font-size: 16px;
     }
 
     .process-list {
@@ -467,6 +485,7 @@
       .section-header,
       .work-card,
       .service-grid,
+      .capability-grid,
       .process-list,
       .resume-intro,
       .resume-block,
@@ -538,8 +557,8 @@
       <div class="intro-footer">
         <p class="availability">Available for selected freelance collaborations.</p>
         <nav class="contact-links" aria-label="Contact links">
-          <a href="mailto:moaichuxun1@gmail.com">Email</a>
-          <a href="https://www.linkedin.com/in/jiaoyang-sun-978976247/" target="_blank" rel="noreferrer">LinkedIn</a>
+          <a href="#contact">Email</a>
+          <a href="#contact">LinkedIn</a>
           <a href="#works">Works</a>
           <a href="#resume">Resume</a>
         </nav>
@@ -607,6 +626,33 @@
           <article class="service">
             <h3>Graphic & Web Design</h3>
             <p>Portfolio websites, project presentation pages, editorial visual systems, and web design for independent practices.</p>
+          </article>
+        </div>
+
+        <div class="capability-grid" aria-label="Detailed service capabilities">
+          <article class="capability">
+            <h3>Landscape & Open Space Concepts</h3>
+            <p>Concept design for gardens, parks, public spaces, planting atmospheres, circulation, and outdoor spatial experience.</p>
+          </article>
+          <article class="capability">
+            <h3>Ecological Site & GIS Analysis</h3>
+            <p>GIS-supported site research, environmental mapping, habitat thinking, slope, land-use, vegetation, and context analysis.</p>
+          </article>
+          <article class="capability">
+            <h3>Sunlight, Wind & Comfort Studies</h3>
+            <p>Grasshopper and Ladybug-based studies for sunlight duration, shadow, wind exposure, microclimate, and outdoor environmental comfort.</p>
+          </article>
+          <article class="capability">
+            <h3>Planting & Climate Strategy</h3>
+            <p>Planting concepts, seasonal structure, biodiversity-supportive palettes, native or climate-adapted species, and resilient softscape direction.</p>
+          </article>
+          <article class="capability">
+            <h3>Presentation & Visual Storytelling</h3>
+            <p>Project diagrams, competition boards, portfolio layouts, editorial narratives, and clear visual systems for spatial or ecological ideas.</p>
+          </article>
+          <article class="capability">
+            <h3>Portfolio & Personal Websites</h3>
+            <p>Clean, responsive websites for designers, studios, researchers, independent practices, and culture-driven projects.</p>
           </article>
         </div>
       </section>
