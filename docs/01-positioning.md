@@ -1,51 +1,65 @@
 # 01 - Positioning
 
-## 项目定位
+## Display Name
 
-这是一个面向 freelancer job 的个人主页，不是传统简历页，也不是纯博客。
+J.Sun
 
-它的核心目标是帮助潜在客户快速判断：
+## One-line Positioning
 
-- 我是否理解他们的问题
-- 我是否具备完成项目的能力
-- 我的审美和工作方式是否适合合作
-- 如何联系我开始合作
+I help landscape, ecology, and culture-driven projects turn place-based ideas into spatial, visual, and digital experiences.
 
-## 目标受众
+## Professional Identity
 
-主要访问者：
+J.Sun is a landscape designer, photographer, and independent naturalist designer working across landscape design, ecological analysis, visual storytelling, and web design.
 
-- 潜在客户
-- 独立创业者
-- 早期团队
-- 个人品牌主理人
-- 需要网页、作品集、AI 工具或自动化流程的人
+## Core Services
 
-## 我希望传达的印象
+### Landscape Design
 
-关键词：
+- Public squares
+- Parks
+- Gardens
+- Planting design
+- Outdoor spatial concepts
+- Site-based design strategy
 
-- 清晰
-- 可靠
-- 高级
-- 自然
-- 有叙事感
-- 有执行力
-- 能把模糊想法落地
+### Ecological Analysis & Consulting
 
-## 服务方向草案
+- Site analysis
+- Ecological research
+- Environmental observation
+- Landscape and habitat strategy
+- Nature-based design consultation
 
-- 个人主页与作品集设计
-- Landing page 设计与实现
-- AI 工具与自动化工作流
-- 产品原型
-- 内容结构与品牌叙事
-- 网页视觉设计与前端实现
+### Graphic & Web Design
 
-## 后续需要补充
+- Portfolio websites
+- Project presentation pages
+- Editorial-style visual systems
+- Graphic design for design and ecology-related projects
+- Web design for independent studios and culture-driven projects
 
-- 我的真实姓名或展示名
-- 一句话身份介绍
-- 3-5 个代表作品
-- 联系方式
-- GitHub / LinkedIn / 邮箱 / 预约链接
+## Target Clients
+
+- Landscape and architecture studios
+- Ecology and environmental organizations
+- Independent creators and researchers
+- Culture-driven projects
+- Small teams needing spatial, visual, or digital design support
+
+## Desired Impression
+
+Visitors should feel that J.Sun is:
+
+- Clear
+- Reliable
+- Observant
+- Natural
+- Thoughtful
+- Visually sensitive
+- Able to connect place, ecology, image, and digital presentation
+
+## Contact
+
+- Email: to be added
+- LinkedIn: to be added
