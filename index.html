@@ -887,6 +887,10 @@
       video.addEventListener("loadedmetadata", () => {
         video.playbackRate = 1.2;
       });
+      video.addEventListener("ended", () => {
+        video.currentTime = 0;
+        video.play();
+      });
     });
   </script>
 </body>
