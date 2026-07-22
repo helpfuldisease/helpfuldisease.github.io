@@ -219,8 +219,13 @@
       margin: -18px;
       display: block;
       object-fit: cover;
+      object-position: center center;
       filter: saturate(0.88) contrast(0.96);
       transition: transform 500ms ease, filter 500ms ease;
+    }
+
+    .work-card:nth-child(3) .work-image img {
+      object-position: center 53%;
     }
 
     .work-card:hover .work-image img {
@@ -312,10 +317,10 @@
 
     .resume-intro {
       display: grid;
-      grid-template-columns: minmax(0, 1fr) 220px;
-      gap: 28px;
+      grid-template-columns: minmax(0, 1fr) 280px;
+      gap: clamp(28px, 4vw, 54px);
       align-items: end;
-      max-width: 920px;
+      max-width: 1040px;
     }
 
     .resume-lead {
@@ -482,7 +487,7 @@
       }
 
       .portrait {
-        max-width: 260px;
+        max-width: 320px;
       }
     }
 
@@ -645,7 +650,7 @@
       <section class="section resume" id="resume">
         <div class="section-header">
           <span class="section-number">Resume</span>
-          <h2>A condensed professional profile.</h2>
+          <h2>Landscape, ecology, and visual practice.</h2>
         </div>
 
         <div class="resume-intro">
