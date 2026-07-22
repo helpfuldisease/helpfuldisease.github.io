@@ -653,7 +653,7 @@
     <main class="content">
       <section class="video-intro" aria-label="Field observation video">
         <a class="video-link" href="#works">
-          <video class="field-video" autoplay muted loop playsinline preload="metadata">
+          <video class="field-video" autoplay muted loop playsinline preload="auto">
             <source src="https://helpfuldisease.github.io/assets/video/field-note.mp4" type="video/mp4">
           </video>
           <span class="video-overlay">
@@ -883,13 +883,19 @@
   </div>
   <script>
     document.querySelectorAll(".field-video").forEach((video) => {
-      video.playbackRate = 1.2;
+      const playbackRate = 1.2;
+      const loopEnd = 17.5;
+
+      video.playbackRate = playbackRate;
       video.addEventListener("loadedmetadata", () => {
-        video.playbackRate = 1.2;
+        video.playbackRate = playbackRate;
       });
-      video.addEventListener("ended", () => {
-        video.currentTime = 0;
-        video.play();
+
+      video.addEventListener("timeupdate", () => {
+        if (video.currentTime >= loopEnd) {
+          video.currentTime = 0.05;
+          video.play();
+        }
       });
     });
   </script>
