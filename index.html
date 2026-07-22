@@ -489,18 +489,12 @@
       font-weight: 600;
     }
 
-    .closing-body {
-      display: grid;
-      grid-template-columns: 120px 1fr;
-      gap: clamp(18px, 4vw, 52px);
-    }
-
-    .closing-copy {
+    .closing {
       max-width: 760px;
     }
 
-    .closing-copy p {
-      margin: 0;
+    .closing h2 {
+      margin-bottom: 22px;
     }
 
     .closing-actions {
@@ -517,7 +511,7 @@
       padding: 12px 18px;
       border: 1px solid var(--ink);
       border-radius: 999px;
-      font-size: 14px;
+      font-size: 15px;
       transition: background 180ms ease, color 180ms ease, transform 180ms ease;
     }
 
@@ -561,8 +555,7 @@
       .process-list,
       .resume-intro,
       .resume-block,
-      .resume-item,
-      .closing-body {
+      .resume-item {
         grid-template-columns: 1fr;
       }
 
@@ -789,20 +782,13 @@
       </section>
 
       <section class="section closing" id="contact">
-        <div class="section-header">
-          <span class="section-number">Contact</span>
-          <h2>For landscape, ecology, visual, or web collaborations.</h2>
-        </div>
-        <div class="closing-body">
-          <span class="section-number">Details</span>
-          <div class="closing-copy">
-            <p>For selected freelance collaborations, landscape research, ecological analysis, visual storytelling, or web projects, please reach out by email or LinkedIn.</p>
-            <div class="closing-actions">
-              <span class="button">Frankfurt am Main, Germany</span>
-              <a class="button" href="mailto:moaichuxun1@gmail.com">moaichuxun1@gmail.com</a>
-              <a class="button" href="https://www.linkedin.com/in/jiaoyang-sun-978976247/" target="_blank" rel="noreferrer">LinkedIn</a>
-            </div>
-          </div>
+        <p class="eyebrow">Contact</p>
+        <h2>For landscape, ecology, visual, or web collaborations.</h2>
+        <p>For selected freelance collaborations, landscape research, ecological analysis, visual storytelling, or web projects, please reach out by email or LinkedIn.</p>
+        <div class="closing-actions">
+          <span class="button">Frankfurt am Main, Germany</span>
+          <a class="button" href="mailto:moaichuxun1@gmail.com">moaichuxun1@gmail.com</a>
+          <a class="button" href="https://www.linkedin.com/in/jiaoyang-sun-978976247/" target="_blank" rel="noreferrer">LinkedIn</a>
         </div>
       </section>
 
