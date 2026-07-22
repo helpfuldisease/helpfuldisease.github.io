@@ -241,6 +241,7 @@
     .work-copy p,
     .service p,
     .process p,
+    .resume p,
     .closing p {
       color: var(--muted);
       font-size: 15px;
@@ -285,6 +286,87 @@
       color: var(--moss);
       font-size: 12px;
       letter-spacing: 0.08em;
+    }
+
+    .resume {
+      display: grid;
+      gap: 34px;
+    }
+
+    .resume-lead {
+      max-width: 800px;
+      margin: 0;
+      color: var(--muted);
+      font-size: clamp(17px, 2vw, 22px);
+      line-height: 1.42;
+    }
+
+    .resume-block {
+      display: grid;
+      grid-template-columns: 120px 1fr;
+      gap: clamp(18px, 4vw, 52px);
+      padding-top: 28px;
+      border-top: 1px solid var(--line);
+    }
+
+    .resume-label {
+      color: var(--ink);
+      font-size: 14px;
+      font-weight: 600;
+    }
+
+    .resume-list {
+      display: grid;
+      gap: 26px;
+    }
+
+    .resume-item {
+      display: grid;
+      grid-template-columns: minmax(120px, 0.45fr) 1fr;
+      gap: 24px;
+    }
+
+    .resume-date {
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    .resume-title {
+      margin: 0;
+      color: var(--ink);
+      font-size: 17px;
+      font-weight: 600;
+      line-height: 1.3;
+    }
+
+    .resume-org {
+      margin: 2px 0 10px;
+      color: var(--ink);
+      font-size: 15px;
+      font-style: italic;
+    }
+
+    .resume-text {
+      margin: 0;
+    }
+
+    .skill-list {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 12px 24px;
+    }
+
+    .skill-list span {
+      color: var(--muted);
+      font-size: 15px;
+    }
+
+    .skill-list strong {
+      display: block;
+      margin-bottom: 3px;
+      color: var(--ink);
+      font-size: 14px;
+      font-weight: 600;
     }
 
     .closing {
@@ -339,7 +421,9 @@
       .section-header,
       .work-card,
       .service-grid,
-      .process-list {
+      .process-list,
+      .resume-block,
+      .resume-item {
         grid-template-columns: 1fr;
       }
 
@@ -349,6 +433,10 @@
 
       .work-image {
         min-height: 220px;
+      }
+
+      .skill-list {
+        grid-template-columns: 1fr;
       }
     }
 
@@ -402,6 +490,7 @@
           <a href="#contact">Email</a>
           <a href="#contact">LinkedIn</a>
           <a href="#works">Works</a>
+          <a href="#resume">Resume</a>
         </nav>
       </div>
     </aside>
@@ -498,6 +587,91 @@
         <div class="closing-actions">
           <a class="button" href="mailto:your-email@example.com">Email to be added</a>
           <a class="button" href="#">LinkedIn to be added</a>
+        </div>
+      </section>
+
+      <section class="section resume" id="resume">
+        <div class="section-header">
+          <span class="section-number">Resume</span>
+          <h2>A condensed professional profile.</h2>
+        </div>
+
+        <p class="resume-lead">Landscape architect with a focus on biodiversity-supportive and climate-resilient open spaces. I combine concept design, GIS-based site analysis, ecological thinking, planting strategy, visual communication, and digital presentation.</p>
+
+        <div class="resume-block">
+          <div class="resume-label">Experience</div>
+          <div class="resume-list">
+            <article class="resume-item">
+              <div class="resume-date">Jul 2024 - present</div>
+              <div>
+                <h3 class="resume-title">Landscape Architect</h3>
+                <p class="resume-org">AS+P Albert Speer + Partner GmbH, Frankfurt am Main</p>
+                <p class="resume-text">Working on international urban development and transformation projects, with contributions to open-space concepts, climate-adapted design measures, integrated planning coordination, GIS-supported site analysis, plans, presentations, and reports.</p>
+              </div>
+            </article>
+
+            <article class="resume-item">
+              <div class="resume-date">Feb 2024 - Mar 2024</div>
+              <div>
+                <h3 class="resume-title">Working Student, Landscape Architecture</h3>
+                <p class="resume-org">LATZ+PARTNER, Kranzberg</p>
+                <p class="resume-text">Supported open-space planning for 70 Gracechurch Street, London, including 3D modelling and presentation materials.</p>
+              </div>
+            </article>
+
+            <article class="resume-item">
+              <div class="resume-date">2022 - 2023</div>
+              <div>
+                <h3 class="resume-title">Landscape Architecture Internships</h3>
+                <p class="resume-org">Nicole M. Meier LandschaftsArchitektur, Munich; Koeber Landschaftsarchitektur GmbH, Stuttgart</p>
+                <p class="resume-text">Supported competitions, design processes, planning, visualisation, and project documentation.</p>
+              </div>
+            </article>
+          </div>
+        </div>
+
+        <div class="resume-block">
+          <div class="resume-label">Education</div>
+          <div class="resume-list">
+            <article class="resume-item">
+              <div class="resume-date">2020 - 2024</div>
+              <div>
+                <h3 class="resume-title">M.Sc. Landscape Architecture</h3>
+                <p class="resume-org">Technical University of Munich, Munich</p>
+                <p class="resume-text">Master thesis on eco-positive strategies for sustainable settlement development in self-sufficient ecological villages.</p>
+              </div>
+            </article>
+
+            <article class="resume-item">
+              <div class="resume-date">2021</div>
+              <div>
+                <h3 class="resume-title">Summer School</h3>
+                <p class="resume-org">Swiss Council of Architecture, Geneva</p>
+                <p class="resume-text">Research on landscape and architecture projects around Lake Geneva, with a focus on artificial landscapes.</p>
+              </div>
+            </article>
+
+            <article class="resume-item">
+              <div class="resume-date">2014 - 2018</div>
+              <div>
+                <h3 class="resume-title">B.Eng. Landscape Architecture</h3>
+                <p class="resume-org">Beijing Forestry University, Beijing</p>
+                <p class="resume-text">Awarded in plant design and public-space competitions, with a foundation in planting, spatial design, and landscape systems.</p>
+              </div>
+            </article>
+          </div>
+        </div>
+
+        <div class="resume-block">
+          <div class="resume-label">Skills</div>
+          <div class="skill-list">
+            <span><strong>CAD & Planning</strong>Vectorworks, AutoCAD</span>
+            <span><strong>GIS & Analysis</strong>QGIS, ArcGIS</span>
+            <span><strong>3D & Parametric</strong>SketchUp, Rhinoceros, Grasshopper</span>
+            <span><strong>Graphics & Presentation</strong>Photoshop, Illustrator, InDesign, photography</span>
+            <span><strong>Languages</strong>Chinese, English, German, basic Japanese</span>
+            <span><strong>Focus Areas</strong>Climate-resilient open spaces, planting design, ecological strategy</span>
+          </div>
         </div>
       </section>
     </main>
