@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Cittaslow | J.Sun</title>
-  <meta name="description" content="Cittaslow, a concept design for pedestrian-friendly urban life by J.Sun.">
+  <meta name="description" content="Cittaslow, a pedestrian-friendly neighborhood street concept for Munich's Isarvorstadt by J.Sun.">
   <style>
     :root { --paper: #f6f1e8; --warm-white: #fbfaf6; --ink: #22211d; --muted: #6f6b61; --line: #d8d0c2; --moss: #63705a; --sage: #d7d9ca; --sand: #e8deca; --shadow: 0 18px 50px rgba(34, 33, 29, 0.08); }
     * { box-sizing: border-box; }
@@ -31,11 +31,16 @@
     .project-facts { display: grid; gap: 12px; align-self: start; padding-top: 18px; border-top: 1px solid var(--line); }
     .project-facts span { color: var(--muted); font-size: 15px; }
     .project-facts strong { display: block; color: var(--ink); font-size: 13px; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; }
-    .image-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 18px; }
-    .image-slot { min-height: 260px; display: flex; align-items: flex-end; padding: 18px; border-top: 1px solid var(--line); background: linear-gradient(135deg, var(--sage), var(--sand)); color: rgba(34, 33, 29, 0.52); font-family: Georgia, "Times New Roman", serif; font-size: 26px; }
+    .info-grid { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 18px; }
+    .info-card { padding-top: 18px; border-top: 1px solid var(--line); }
+    .image-stack { display: grid; gap: 34px; justify-items: center; }
+    .image-figure { margin: 0; width: min(100%, 1120px); background: var(--warm-white); box-shadow: var(--shadow); }
+    .image-figure img { width: 100%; height: auto; filter: saturate(0.94) contrast(0.99); }
+    .image-figure figcaption { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
+    .wide-figure { width: min(100%, 1240px); }
     .quiet-section .section-header { margin-bottom: 18px; }
     .quiet-section .section-header h2 { display: none; }
-    @media (max-width: 800px) { .topbar, .hero, .section-header, .text-grid, .image-grid { display: grid; grid-template-columns: 1fr; } .hero { min-height: auto; } .hero-image { min-height: 260px; } }
+    @media (max-width: 800px) { .topbar, .hero, .section-header, .text-grid, .info-grid { display: grid; grid-template-columns: 1fr; } .hero { min-height: auto; } .hero-image { min-height: 260px; } }
   </style>
 </head>
 <body>
@@ -46,39 +51,71 @@
     </nav>
     <section class="hero">
       <div>
-        <p class="eyebrow">Concept design / Urban life</p>
+        <p class="eyebrow">Pedestrian-friendly neighborhood / Slow urban life</p>
         <h1>Cittaslow</h1>
       </div>
       <figure class="hero-image">
-        <img src="https://helpfuldisease.github.io/assets/works/landscape-cover.jpg" alt="Cittaslow project cover">
+        <img src="../../assets/works/landscape/cittaslow/cittaslow-cover.jpg" alt="Cittaslow pedestrian-friendly neighborhood street collage">
       </figure>
     </section>
     <section class="section">
       <div class="section-header">
         <span class="section-number">Overview</span>
-        <h2>Landscape thinking for slower urban life.</h2>
+        <h2>Create pedestrian-friendly urban areas.</h2>
       </div>
       <div class="text-grid">
         <div class="project-description">
-          <p>A concept design exploring how public space can support slower everyday rhythms, local identity, community life, and a more human-scaled relationship between landscape and city.</p>
-          <p>This page will later hold the selected boards, diagrams, plans, and atmosphere images from the original portfolio material.</p>
+          <p>Cittaslow is a concept design for Munich's Isarvorstadt, exploring how the former Viehhof and Schlachthofviertel context can support a slower, more pedestrian-friendly neighborhood life.</p>
+          <p>The proposal rethinks street space as shared public space: a lively everyday environment for walking, cycling, sitting, temporary activities, local planting, open street culture, and informal community life.</p>
         </div>
         <div class="project-facts" aria-label="Project facts">
-          <span><strong>Type</strong>Concept design</span>
-          <span><strong>Focus</strong>Cittaslow, public life, urban identity, landscape experience</span>
-          <span><strong>Material</strong>Plans, diagrams, boards, visual narrative</span>
+          <span><strong>Original title</strong>Cittaslow</span>
+          <span><strong>Location</strong>Isarvorstadt, Munich, Germany</span>
+          <span><strong>Year</strong>2020/21</span>
+          <span><strong>Type</strong>Concept design / public space study</span>
+          <span><strong>Context</strong>Former Viehhof yard and Schlachthofviertel neighborhood</span>
+          <span><strong>Focus</strong>Pedestrian-friendly streets, local plants, temporary uses, neighborhood furniture, slow mobility</span>
         </div>
       </div>
     </section>
     <section class="section quiet-section">
       <div class="section-header">
-        <span class="section-number">Images</span>
-        <h2>Material to add.</h2>
+        <span class="section-number">Focus</span>
+        <h2>Design focus</h2>
       </div>
-      <div class="image-grid">
-        <div class="image-slot">Plan</div>
-        <div class="image-slot">Diagram</div>
-        <div class="image-slot">Board</div>
+      <div class="info-grid">
+        <article class="info-card"><h3>Open Street</h3><p>Reclaiming road space for walking, cycling, lingering, and informal daily use.</p></article>
+        <article class="info-card"><h3>Local Plants</h3><p>Using planting to soften the street edge and support a richer ecological community.</p></article>
+        <article class="info-card"><h3>Temporary Life</h3><p>Allowing flexible activities to bring a rough, lively charm into the new neighborhood.</p></article>
+        <article class="info-card"><h3>Neighborhood Furniture</h3><p>Small-scale seating, tables, shade, and edges create places to pause and meet.</p></article>
+      </div>
+    </section>
+    <section class="section quiet-section">
+      <div class="section-header">
+        <span class="section-number">Materials</span>
+        <h2>Materials</h2>
+      </div>
+      <div class="image-stack">
+        <figure class="image-figure wide-figure">
+          <img src="../../assets/works/landscape/cittaslow/cittaslow-cover.jpg" alt="Cittaslow slow neighborhood street visualization">
+          <figcaption>Pedestrian-friendly neighborhood street visualization</figcaption>
+        </figure>
+        <figure class="image-figure wide-figure">
+          <img src="../../assets/works/landscape/cittaslow/cittaslow-intro-board.jpg" alt="Cittaslow introductory portfolio board">
+          <figcaption>Introductory project board</figcaption>
+        </figure>
+        <figure class="image-figure wide-figure">
+          <img src="../../assets/works/landscape/cittaslow/cittaslow-site-analysis-blue.jpg" alt="Blue monochrome site analysis of the existing street condition in Munich Isarvorstadt">
+          <figcaption>Existing street condition analysis</figcaption>
+        </figure>
+        <figure class="image-figure wide-figure">
+          <img src="../../assets/works/landscape/cittaslow/cittaslow-analysis-strategy.jpg" alt="Cittaslow analysis and strategy board">
+          <figcaption>Analysis and strategy board</figcaption>
+        </figure>
+        <figure class="image-figure wide-figure">
+          <img src="../../assets/works/landscape/cittaslow/cittaslow-site-plan-principle.jpg" alt="Cittaslow site plan and principle board">
+          <figcaption>Site plan and principle board</figcaption>
+        </figure>
       </div>
     </section>
   </main>
