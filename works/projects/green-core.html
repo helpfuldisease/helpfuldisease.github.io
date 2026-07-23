@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Green Core | J.Sun</title>
-  <meta name="description" content="Green Core, an urban park and green open-space design by J.Sun.">
+  <title>Green Lung | J.Sun</title>
+  <meta name="description" content="Green Lung, an ecological urban renewal and green corridor project in Haidian District, Beijing by J.Sun.">
   <style>
     :root { --paper: #f6f1e8; --warm-white: #fbfaf6; --ink: #22211d; --muted: #6f6b61; --line: #d8d0c2; --moss: #63705a; --sage: #d7d9ca; --sand: #e8deca; --shadow: 0 18px 50px rgba(34, 33, 29, 0.08); }
     * { box-sizing: border-box; }
@@ -31,11 +31,16 @@
     .project-facts { display: grid; gap: 12px; align-self: start; padding-top: 18px; border-top: 1px solid var(--line); }
     .project-facts span { color: var(--muted); font-size: 15px; }
     .project-facts strong { display: block; color: var(--ink); font-size: 13px; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; }
-    .image-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 18px; }
-    .image-slot { min-height: 260px; display: flex; align-items: flex-end; padding: 18px; border-top: 1px solid var(--line); background: linear-gradient(135deg, var(--sage), var(--sand)); color: rgba(34, 33, 29, 0.52); font-family: Georgia, "Times New Roman", serif; font-size: 26px; }
+    .info-grid { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 18px; }
+    .info-card { padding-top: 18px; border-top: 1px solid var(--line); }
+    .image-stack { display: grid; gap: 34px; justify-items: center; }
+    .image-figure { margin: 0; width: min(100%, 1120px); background: var(--warm-white); box-shadow: var(--shadow); }
+    .image-figure img { width: 100%; height: auto; filter: saturate(0.94) contrast(0.99); }
+    .image-figure figcaption { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
+    .wide-figure { width: min(100%, 1240px); }
     .quiet-section .section-header { margin-bottom: 18px; }
     .quiet-section .section-header h2 { display: none; }
-    @media (max-width: 800px) { .topbar, .hero, .section-header, .text-grid, .image-grid { display: grid; grid-template-columns: 1fr; } .hero { min-height: auto; } .hero-image { min-height: 260px; } }
+    @media (max-width: 800px) { .topbar, .hero, .section-header, .text-grid, .info-grid { display: grid; grid-template-columns: 1fr; } .hero { min-height: auto; } .hero-image { min-height: 260px; } }
   </style>
 </head>
 <body>
@@ -46,39 +51,72 @@
     </nav>
     <section class="hero">
       <div>
-        <p class="eyebrow">Urban renewal / Park design</p>
-        <h1>Green Core</h1>
+        <p class="eyebrow">Ecological urban renewal / Green corridor</p>
+        <h1>Green Lung</h1>
       </div>
       <figure class="hero-image">
-        <img src="https://helpfuldisease.github.io/assets/works/landscape-cover.jpg" alt="Green Core project cover">
+        <img src="../../assets/works/landscape/green-core/green-lung-cover-centered.jpg" alt="Clean centered aerial rendering of the Green Lung urban renewal park">
       </figure>
     </section>
     <section class="section">
       <div class="section-header">
         <span class="section-number">Overview</span>
-        <h2>Green open space in a dense city.</h2>
+        <h2>A green lung for an over-urbanized district.</h2>
       </div>
       <div class="text-grid">
         <div class="project-description">
-          <p>An urban park design organized around a large open lawn as the spatial core, connecting recreation, creative activity, circulation, and public green space within a dense urban renewal context.</p>
-          <p>This page will later hold selected plans, sections, diagrams, and perspective images.</p>
+          <p>Green Lung is an ecological urban renewal project in Haidian District, Beijing, developed around an underused railway corridor and a dense university-and-technology district lacking a coherent open-space system.</p>
+          <p>The proposal transforms fragmented residual land into a north-south green corridor, using a large Sun Lawn as the open landscape core. Quiet garden rooms, youth activity spaces, cultural renovation, railway-edge planting, and social lawns are organized to reconnect everyday recreation, ecological structure, and urban regeneration.</p>
         </div>
         <div class="project-facts" aria-label="Project facts">
-          <span><strong>Type</strong>Urban park design</span>
-          <span><strong>Focus</strong>Green open space, central lawn, circulation, recreation, creative activity</span>
-          <span><strong>Material</strong>Plans, sections, visualisations, boards</span>
+          <span><strong>Original title</strong>Green Lung</span>
+          <span><strong>Location</strong>Haidian District, Beijing, China</span>
+          <span><strong>Year</strong>2017</span>
+          <span><strong>Type</strong>Ecological urban renewal / park design</span>
+          <span><strong>Context</strong>Old railway corridor, dense urban fabric, university district</span>
+          <span><strong>Focus</strong>Green corridor, Sun Lawn, youth space, cultural landscape, ecological open space</span>
+          <span><strong>Material</strong>Master plan, site analysis, strategy diagrams, visualisations</span>
         </div>
       </div>
     </section>
     <section class="section quiet-section">
       <div class="section-header">
-        <span class="section-number">Images</span>
-        <h2>Material to add.</h2>
+        <span class="section-number">Focus</span>
+        <h2>Design focus</h2>
       </div>
-      <div class="image-grid">
-        <div class="image-slot">Plan</div>
-        <div class="image-slot">Section</div>
-        <div class="image-slot">View</div>
+      <div class="info-grid">
+        <article class="info-card"><h3>Railway Green Belt</h3><p>Reusing residual railway-edge space as a linear ecological connector through the district.</p></article>
+        <article class="info-card"><h3>Sun Lawn</h3><p>Creating a large open landscape core for rest, informal gathering, and social life.</p></article>
+        <article class="info-card"><h3>Garden Rooms</h3><p>Placing reading, meditation, music, and philosophy gardens near cultural buildings.</p></article>
+        <article class="info-card"><h3>Youth Vitality</h3><p>Transforming under-railway and reserved-building areas into active cultural and recreational spaces.</p></article>
+      </div>
+    </section>
+    <section class="section quiet-section">
+      <div class="section-header">
+        <span class="section-number">Materials</span>
+        <h2>Materials</h2>
+      </div>
+      <div class="image-stack">
+        <figure class="image-figure wide-figure">
+          <img src="../../assets/works/landscape/green-core/green-lung-cover-centered.jpg" alt="Clean centered aerial rendering of Green Lung">
+          <figcaption>Clean centered aerial rendering</figcaption>
+        </figure>
+        <figure class="image-figure wide-figure">
+          <img src="../../assets/works/landscape/green-core/green-lung-sun-lawn.jpg" alt="Sun Lawn visualization with naturalistic planting edges">
+          <figcaption>Sun Lawn visualization</figcaption>
+        </figure>
+        <figure class="image-figure">
+          <img src="../../assets/works/landscape/green-core/green-lung-strategy-analysis-clean.jpg" alt="Problems, opportunities, strategies, and needs analysis for Green Lung">
+          <figcaption>Problems, opportunities, strategies, and needs analysis</figcaption>
+        </figure>
+        <figure class="image-figure">
+          <img src="../../assets/works/landscape/green-core/green-lung-site-analysis-clean.jpg" alt="Green Lung site plan and landscape analysis">
+          <figcaption>Site plan and landscape analysis</figcaption>
+        </figure>
+        <figure class="image-figure wide-figure">
+          <img src="../../assets/works/landscape/green-core/green-lung-program-master-plan.jpg" alt="Green Lung program concepts and master plan">
+          <figcaption>Program concepts and master plan</figcaption>
+        </figure>
       </div>
     </section>
   </main>
