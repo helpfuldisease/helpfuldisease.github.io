@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Mapping Studies | J.Sun</title>
-  <meta name="description" content="Mapping Studies, GIS-based site analysis and cartographic landscape research by J.Sun.">
+  <meta name="description" content="Mapping Studies, a photo-based landscape mapping research project along the Elbe River near Koenigstein by J.Sun.">
   <style>
     :root { --paper: #f6f1e8; --warm-white: #fbfaf6; --ink: #22211d; --muted: #6f6b61; --line: #d8d0c2; --moss: #63705a; --sage: #d7d9ca; --sand: #e8deca; --shadow: 0 18px 50px rgba(34, 33, 29, 0.08); }
     * { box-sizing: border-box; }
@@ -31,11 +31,16 @@
     .project-facts { display: grid; gap: 12px; align-self: start; padding-top: 18px; border-top: 1px solid var(--line); }
     .project-facts span { color: var(--muted); font-size: 15px; }
     .project-facts strong { display: block; color: var(--ink); font-size: 13px; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; }
-    .image-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 18px; }
-    .image-slot { min-height: 260px; display: flex; align-items: flex-end; padding: 18px; border-top: 1px solid var(--line); background: linear-gradient(135deg, var(--sage), var(--sand)); color: rgba(34, 33, 29, 0.52); font-family: Georgia, "Times New Roman", serif; font-size: 26px; }
+    .info-grid { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 18px; }
+    .info-card { padding-top: 18px; border-top: 1px solid var(--line); }
+    .image-stack { display: grid; gap: 34px; justify-items: center; }
+    .image-figure { margin: 0; width: min(100%, 1120px); background: var(--warm-white); box-shadow: var(--shadow); }
+    .image-figure img { width: 100%; height: auto; filter: saturate(0.96) contrast(0.99); }
+    .image-figure figcaption { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
+    .wide-figure { width: min(100%, 1240px); }
     .quiet-section .section-header { margin-bottom: 18px; }
     .quiet-section .section-header h2 { display: none; }
-    @media (max-width: 800px) { .topbar, .hero, .section-header, .text-grid, .image-grid { display: grid; grid-template-columns: 1fr; } .hero { min-height: auto; } .hero-image { min-height: 260px; } }
+    @media (max-width: 800px) { .topbar, .hero, .section-header, .text-grid, .info-grid { display: grid; grid-template-columns: 1fr; } .hero { min-height: auto; } .hero-image { min-height: 260px; } }
   </style>
 </head>
 <body>
@@ -46,39 +51,59 @@
     </nav>
     <section class="hero">
       <div>
-        <p class="eyebrow">GIS / Cartographic analysis</p>
+        <p class="eyebrow">Mapping research / Riverside encounters</p>
         <h1>Mapping Studies</h1>
       </div>
       <figure class="hero-image">
-        <img src="https://helpfuldisease.github.io/assets/works/ecology-cover.jpg" alt="Mapping Studies project cover">
+        <img src="../../assets/works/ecology/mapping-studies/mapping-cover.jpg" alt="Elbe riverside landscape and city skyline used as Mapping Studies project cover">
       </figure>
     </section>
     <section class="section">
       <div class="section-header">
         <span class="section-number">Overview</span>
-        <h2>Site reading through maps, layers, and visual analysis.</h2>
+        <h2>Researching potential encounters along the Elbe.</h2>
       </div>
       <div class="text-grid">
         <div class="project-description">
-          <p>A mapping-based research and analysis project translating ecological, urban, and spatial data into clear visual layers for landscape decision-making.</p>
-          <p>The page will later hold GIS maps, site-reading diagrams, analytical overlays, and cartographic narratives from the original portfolio material.</p>
+          <p>This mapping study investigates how people encounter riverside landscapes along a section of the Elbe River near Koenigstein, where waterfront paths, grass slopes, bridges, campsites, and mountain viewpoints form a sequence of gathering situations.</p>
+          <p>Starting from online photo traces and visual site readings, the project classifies gathering places into waterfront and mountain-forest types, then compares accessibility, spatial structure, influencing factors, directionality, and atmosphere.</p>
         </div>
         <div class="project-facts" aria-label="Project facts">
-          <span><strong>Type</strong>Mapping / GIS-based analysis</span>
-          <span><strong>Focus</strong>Site analysis, ecological layers, urban structure, spatial patterns, visual storytelling</span>
-          <span><strong>Material</strong>Maps, diagrams, overlays, research graphics</span>
+          <span><strong>Original title</strong>Human and Nature</span>
+          <span><strong>Location</strong>Elbe River near Koenigstein, Germany</span>
+          <span><strong>Year</strong>2020</span>
+          <span><strong>Type</strong>Mapping research / site analysis</span>
+          <span><strong>Focus</strong>Riverside encounters, gathering patterns, photo-based observation, spatial typology</span>
+          <span><strong>Method</strong>Online photo collection, typology, mapping, spatial comparison</span>
         </div>
       </div>
     </section>
     <section class="section quiet-section">
       <div class="section-header">
-        <span class="section-number">Images</span>
-        <h2>Material to add.</h2>
+        <span class="section-number">Focus</span>
+        <h2>Research focus</h2>
       </div>
-      <div class="image-grid">
-        <div class="image-slot">Map</div>
-        <div class="image-slot">Layer</div>
-        <div class="image-slot">Diagram</div>
+      <div class="info-grid">
+        <article class="info-card"><h3>Photo Traces</h3><p>Using public image traces to locate places where people pause, gather, and document outdoor experiences.</p></article>
+        <article class="info-card"><h3>Encounter Typology</h3><p>Comparing waterfront and mountain-forest situations through repeated spatial patterns.</p></article>
+        <article class="info-card"><h3>Spatial Structure</h3><p>Reading access, edges, views, slope, infrastructure, and atmospheres as conditions for gathering.</p></article>
+        <article class="info-card"><h3>Linear System</h3><p>Summarizing encounters as a mixed linear and herringbone system along the river corridor.</p></article>
+      </div>
+    </section>
+    <section class="section quiet-section">
+      <div class="section-header">
+        <span class="section-number">Materials</span>
+        <h2>Materials</h2>
+      </div>
+      <div class="image-stack">
+        <figure class="image-figure wide-figure">
+          <img src="../../assets/works/ecology/mapping-studies/mapping-elbe-waterfront-map.jpg" alt="Mapping board showing Elbe waterfront spaces, encounter typology, and research logic">
+          <figcaption>Elbe waterfront mapping and research logic</figcaption>
+        </figure>
+        <figure class="image-figure wide-figure">
+          <img src="../../assets/works/ecology/mapping-studies/mapping-field-observation-board.jpg" alt="Board of black and white photo traces and hand-drawn encounter observations">
+          <figcaption>Field observation fragments</figcaption>
+        </figure>
       </div>
     </section>
   </main>
