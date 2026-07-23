@@ -33,15 +33,17 @@
     .project-facts span { color: var(--muted); font-size: 15px; }
     .project-facts strong { display: block; color: var(--ink); font-size: 13px; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; }
     .info-card { padding-top: 18px; border-top: 1px solid var(--line); }
-    .image-stack { display: grid; gap: 18px; }
+    .image-stack { display: grid; gap: 34px; justify-items: center; }
     .image-figure { margin: 0; background: var(--warm-white); box-shadow: var(--shadow); }
+    .poster-figure { width: min(100%, 960px); padding: clamp(10px, 1.4vw, 18px); }
     .image-figure img { width: 100%; height: auto; filter: saturate(0.92) contrast(0.98); }
+    .poster-figure img { background: var(--warm-white); }
     .model-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 18px; }
     .model-grid .image-figure img { height: 100%; aspect-ratio: 4 / 3; object-fit: cover; }
     .image-figure figcaption { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
     .quiet-section .section-header { margin-bottom: 18px; }
     .quiet-section .section-header h2 { display: none; }
-    @media (max-width: 800px) { .topbar, .hero, .section-header, .text-grid, .image-grid, .info-grid, .model-grid { display: grid; grid-template-columns: 1fr; } .hero { min-height: auto; } .hero-image { min-height: 260px; } }
+    @media (max-width: 800px) { .topbar, .hero, .section-header, .text-grid, .image-grid, .info-grid, .model-grid { display: grid; grid-template-columns: 1fr; } .hero { min-height: auto; } .hero-image { min-height: 260px; } .poster-figure { padding: 8px; } }
   </style>
 </head>
 <body>
@@ -96,24 +98,34 @@
         <h2>Poster</h2>
       </div>
       <div class="image-stack">
-        <figure class="image-figure">
-          <img src="../../assets/works/ecology/e-co-scape/e-co-scape-01.jpg" alt="E-CO-SCAPE project board 01">
+        <figure class="image-figure poster-figure">
+          <a href="../../assets/works/ecology/e-co-scape/e-co-scape-01.jpg" target="_blank" rel="noreferrer" aria-label="Open E-CO-SCAPE project board 01 in a new tab">
+            <img src="../../assets/works/ecology/e-co-scape/e-co-scape-01.jpg" alt="E-CO-SCAPE project board 01">
+          </a>
           <figcaption>Project board 01</figcaption>
         </figure>
-        <figure class="image-figure">
-          <img src="../../assets/works/ecology/e-co-scape/e-co-scape-02.jpg" alt="E-CO-SCAPE project board 02">
+        <figure class="image-figure poster-figure">
+          <a href="../../assets/works/ecology/e-co-scape/e-co-scape-02.jpg" target="_blank" rel="noreferrer" aria-label="Open E-CO-SCAPE project board 02 in a new tab">
+            <img src="../../assets/works/ecology/e-co-scape/e-co-scape-02.jpg" alt="E-CO-SCAPE project board 02">
+          </a>
           <figcaption>Project board 02</figcaption>
         </figure>
-        <figure class="image-figure">
-          <img src="../../assets/works/ecology/e-co-scape/e-co-scape-03.jpg" alt="E-CO-SCAPE project board 03">
+        <figure class="image-figure poster-figure">
+          <a href="../../assets/works/ecology/e-co-scape/e-co-scape-03.jpg" target="_blank" rel="noreferrer" aria-label="Open E-CO-SCAPE project board 03 in a new tab">
+            <img src="../../assets/works/ecology/e-co-scape/e-co-scape-03.jpg" alt="E-CO-SCAPE project board 03">
+          </a>
           <figcaption>Project board 03</figcaption>
         </figure>
-        <figure class="image-figure">
-          <img src="../../assets/works/ecology/e-co-scape/e-co-scape-04.jpg" alt="E-CO-SCAPE project board 04">
+        <figure class="image-figure poster-figure">
+          <a href="../../assets/works/ecology/e-co-scape/e-co-scape-04.jpg" target="_blank" rel="noreferrer" aria-label="Open E-CO-SCAPE project board 04 in a new tab">
+            <img src="../../assets/works/ecology/e-co-scape/e-co-scape-04.jpg" alt="E-CO-SCAPE project board 04">
+          </a>
           <figcaption>Project board 04</figcaption>
         </figure>
-        <figure class="image-figure">
-          <img src="../../assets/works/ecology/e-co-scape/e-co-scape-05.jpg" alt="E-CO-SCAPE project board 05">
+        <figure class="image-figure poster-figure">
+          <a href="../../assets/works/ecology/e-co-scape/e-co-scape-05.jpg" target="_blank" rel="noreferrer" aria-label="Open E-CO-SCAPE project board 05 in a new tab">
+            <img src="../../assets/works/ecology/e-co-scape/e-co-scape-05.jpg" alt="E-CO-SCAPE project board 05">
+          </a>
           <figcaption>Project board 05</figcaption>
         </figure>
       </div>
