@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Landscape Design | J.Sun</title>
+  <meta name="description" content="Landscape design works by J.Sun, including open-space concepts, public spaces, gardens, parks, and planting design.">
+  <style>
+    :root {
+      --paper: #f6f1e8;
+      --warm-white: #fbfaf6;
+      --ink: #22211d;
+      --muted: #6f6b61;
+      --line: #d8d0c2;
+      --moss: #63705a;
+      --sage: #d7d9ca;
+      --sand: #e8deca;
+      --shadow: 0 18px 50px rgba(34, 33, 29, 0.08);
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      color: var(--ink);
+      background: var(--paper);
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      line-height: 1.55;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    img {
+      max-width: 100%;
+      display: block;
+    }
+
+    .page-shell {
+      min-height: 100vh;
+      display: grid;
+      grid-template-columns: minmax(280px, 30vw) 1fr;
+    }
+
+    .side {
+      position: sticky;
+      top: 0;
+      height: 100vh;
+      padding: 42px clamp(24px, 4vw, 58px);
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      background: var(--warm-white);
+      border-right: 1px solid var(--line);
+    }
+
+    .eyebrow,
+    .section-number,
+    .meta {
+      color: var(--moss);
+      font-size: 12px;
+      font-weight: 600;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+
+    .eyebrow {
+      margin: 0 0 18px;
+    }
+
+    h1,
+    h2,
+    h3 {
+      margin: 0;
+      font-family: Georgia, "Times New Roman", serif;
+      font-weight: 400;
+      letter-spacing: 0;
+    }
+
+    h1 {
+      max-width: 9ch;
+      font-size: clamp(52px, 7vw, 104px);
+      line-height: 0.94;
+    }
+
+    h2 {
+      font-size: clamp(32px, 4.4vw, 64px);
+      line-height: 1;
+    }
+
+    h3 {
+      font-family: Inter, ui-sans-serif, system-ui, sans-serif;
+      font-size: 18px;
+      font-weight: 500;
+      line-height: 1.25;
+    }
+
+    p {
+      color: var(--muted);
+      font-size: 15px;
+    }
+
+    .side-note {
+      max-width: 360px;
+      margin-top: 24px;
+    }
+
+    .nav-list {
+      display: grid;
+      gap: 10px;
+    }
+
+    .pill {
+      display: inline-flex;
+      width: fit-content;
+      min-height: 44px;
+      align-items: center;
+      padding: 12px 18px;
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      font-size: 15px;
+      transition: background 180ms ease, border-color 180ms ease, transform 180ms ease;
+    }
+
+    .pill:hover {
+      background: var(--sand);
+      border-color: var(--moss);
+      transform: translateY(-1px);
+    }
+
+    .content {
+      padding: 48px clamp(22px, 5vw, 86px) 72px;
+    }
+
+    .section {
+      padding: 72px 0;
+      border-bottom: 1px solid var(--line);
+    }
+
+    .section:first-of-type {
+      padding-top: 0;
+    }
+
+    .section:last-child {
+      border-bottom: 0;
+      padding-bottom: 0;
+    }
+
+    .visually-hidden {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      overflow: hidden;
+      clip: rect(0 0 0 0);
+      white-space: nowrap;
+    }
+
+    .section-header {
+      display: grid;
+      grid-template-columns: 120px 1fr;
+      gap: clamp(18px, 4vw, 52px);
+      align-items: baseline;
+      margin-bottom: 28px;
+    }
+
+    .project-list {
+      display: grid;
+      gap: 34px;
+    }
+
+    .project-card {
+      display: grid;
+      grid-template-columns: minmax(260px, 1.2fr) minmax(220px, 0.8fr);
+      gap: clamp(20px, 4vw, 48px);
+      align-items: end;
+      padding-top: 28px;
+      border-top: 1px solid var(--line);
+    }
+
+    .project-image {
+      aspect-ratio: 16 / 10;
+      min-height: 360px;
+      overflow: hidden;
+      background: var(--sand);
+      box-shadow: var(--shadow);
+    }
+
+    .project-image img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      filter: grayscale(1) saturate(0.12) contrast(0.95);
+      transition: filter 500ms ease, transform 600ms ease;
+    }
+
+    .project-card:hover .project-image img {
+      filter: grayscale(0) saturate(0.9) contrast(0.98);
+      transform: scale(1.025);
+    }
+
+    .project-copy p {
+      margin-bottom: 0;
+    }
+
+    .project-status {
+      display: inline-flex;
+      margin-top: 18px;
+      color: var(--moss);
+      font-size: 12px;
+      font-weight: 600;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+
+    @media (max-width: 900px) {
+      .page-shell {
+        display: block;
+      }
+
+      .side {
+        position: relative;
+        height: auto;
+        min-height: 70vh;
+        border-right: 0;
+        border-bottom: 1px solid var(--line);
+      }
+
+      .section-header,
+      .project-card {
+        grid-template-columns: 1fr;
+      }
+
+      .project-image {
+        min-height: 280px;
+      }
+    }
+
+    @media (max-width: 560px) {
+      .side,
+      .content {
+        padding: 32px 22px 52px;
+      }
+
+      h1 {
+        font-size: 58px;
+      }
+
+      .section {
+        padding: 52px 0;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="page-shell">
+    <aside class="side" aria-label="Work detail navigation">
+      <div>
+        <p class="eyebrow">Selected works</p>
+        <h1>Landscape Design</h1>
+        <p class="side-note">Open-space concepts, spatial design, planting atmosphere, and public landscape narratives.</p>
+      </div>
+      <nav class="nav-list" aria-label="Work pages">
+        <a class="pill" href="../index.html#works">Back to works</a>
+        <a class="pill" href="ecology.html">Ecology</a>
+        <a class="pill" href="photography.html">Photography</a>
+      </nav>
+    </aside>
+
+    <main class="content">
+      <section class="section">
+        <div class="section-header">
+          <span class="section-number">Projects</span>
+          <h2 class="visually-hidden">Landscape design project index.</h2>
+        </div>
+
+        <div class="project-list">
+          <a class="project-card" href="projects/frame-verona.html">
+            <div class="project-image">
+              <img src="https://helpfuldisease.github.io/assets/works/landscape-cover.jpg" alt="FRAME Verona project cover">
+            </div>
+            <div class="project-copy">
+              <p class="meta">Post-industrial landscape / Public space / Urban wild</p>
+              <h3>FRAME</h3>
+              <p>A post-industrial landscape proposal for Verona's former Porta Nuova freight yard, using a clear spatial frame to reconnect green corridors, public life, railway memory, and urban wilderness.</p>
+              <span class="project-status">Open project</span>
+            </div>
+          </a>
+          <a class="project-card" href="projects/cultural-landscape-strategy.html">
+            <div class="project-image">
+              <img src="https://helpfuldisease.github.io/assets/works/landscape-cover.jpg" alt="Cultural Landscape Strategy project cover">
+            </div>
+            <div class="project-copy">
+              <p class="meta">Professional work / Cultural landscape / Development strategy</p>
+              <h3>Cultural Landscape Strategy</h3>
+              <p>A professional concept development and spatial strategy project for cultural landscape transformation, connecting site identity, landscape structure, public experience, and implementation-oriented design steps.</p>
+              <span class="project-status">Open project</span>
+            </div>
+          </a>
+          <a class="project-card" href="projects/landscape-collection.html">
+            <div class="project-image">
+              <img src="https://helpfuldisease.github.io/assets/works/landscape-cover.jpg" alt="Landscape design collection cover">
+            </div>
+            <div class="project-copy">
+              <p class="meta">Landscape design / Open space / Planting</p>
+              <h3>Landscape Design Collection</h3>
+              <p>A curated collection for public space, gardens, parks, planting concepts, spatial narratives, and presentation drawings.</p>
+              <span class="project-status">Open project</span>
+            </div>
+          </a>
+          <a class="project-card" href="projects/cittaslow.html">
+            <div class="project-image">
+              <img src="https://helpfuldisease.github.io/assets/works/landscape-cover.jpg" alt="Cittaslow project cover">
+            </div>
+            <div class="project-copy">
+              <p class="meta">Concept design / Cittaslow / Public landscape</p>
+              <h3>Cittaslow</h3>
+              <p>A concept design for pedestrian-friendly urban life, exploring slower everyday rhythms, local identity, public space, and a human-scaled relationship between landscape and city.</p>
+              <span class="project-status">Open project</span>
+            </div>
+          </a>
+          <a class="project-card" href="projects/green-core.html">
+            <div class="project-image">
+              <img src="https://helpfuldisease.github.io/assets/works/landscape-cover.jpg" alt="Green Core project cover">
+            </div>
+            <div class="project-copy">
+              <p class="meta">Urban renewal / Park design / Public green space</p>
+              <h3>Green Core</h3>
+              <p>A dense-city park design using a central lawn as the spatial core, connecting recreation, creative activity, circulation, and green open space in an urban renewal context.</p>
+              <span class="project-status">Open project</span>
+            </div>
+          </a>
+          <a class="project-card" href="projects/flower.html">
+            <div class="project-image">
+              <img src="https://helpfuldisease.github.io/assets/works/landscape-cover.jpg" alt="FLOWER project cover">
+            </div>
+            <div class="project-copy">
+              <p class="meta">Planting design / Flower border / Seasonal atmosphere</p>
+              <h3>FLOWER</h3>
+              <p>A flower border design exploring plant composition, seasonal rhythm, colour, texture, and the atmosphere created by layered plant communities.</p>
+              <span class="project-status">Open project</span>
+            </div>
+          </a>
+        </div>
+      </section>
+    </main>
+  </div>
+</body>
+</html>
