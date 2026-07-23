@@ -150,6 +150,7 @@
       object-fit: cover;
       object-position: center 52%;
       filter: saturate(0.88) contrast(0.96);
+      cursor: zoom-in;
     }
 
     .section {
@@ -234,6 +235,7 @@
       object-fit: cover;
       filter: saturate(0.82) contrast(0.98);
       transition: transform 700ms ease, filter 700ms ease;
+      cursor: zoom-in;
     }
 
     .frame:hover img {
@@ -299,11 +301,83 @@
       height: auto;
       filter: saturate(0.82) contrast(0.98);
       transition: transform 700ms ease, filter 700ms ease;
+      cursor: zoom-in;
     }
 
     .archive-frame:hover img {
       transform: scale(1.018);
       filter: saturate(0.95) contrast(1);
+    }
+
+    .lightbox {
+      position: fixed;
+      inset: 0;
+      z-index: 20;
+      display: none;
+      align-items: center;
+      justify-content: center;
+      padding: 28px;
+      background: rgba(22, 22, 20, 0.9);
+    }
+
+    .lightbox.is-open {
+      display: flex;
+    }
+
+    .lightbox img {
+      max-width: min(100%, 1440px);
+      max-height: calc(100vh - 56px);
+      width: auto;
+      height: auto;
+      object-fit: contain;
+      box-shadow: 0 22px 70px rgba(0, 0, 0, 0.36);
+    }
+
+    .lightbox-button {
+      position: absolute;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 44px;
+      height: 44px;
+      border: 1px solid rgba(251, 250, 246, 0.46);
+      border-radius: 999px;
+      background: rgba(34, 33, 29, 0.5);
+      color: var(--warm-white);
+      font-size: 26px;
+      line-height: 1;
+      cursor: pointer;
+      transition: background 180ms ease, border-color 180ms ease, transform 180ms ease;
+    }
+
+    .lightbox-button:hover {
+      background: rgba(34, 33, 29, 0.78);
+      border-color: rgba(251, 250, 246, 0.78);
+      transform: translateY(-1px);
+    }
+
+    .lightbox-close {
+      top: 22px;
+      right: 22px;
+    }
+
+    .lightbox-prev,
+    .lightbox-next {
+      top: 50%;
+      transform: translateY(-50%);
+    }
+
+    .lightbox-prev:hover,
+    .lightbox-next:hover {
+      transform: translateY(calc(-50% - 1px));
+    }
+
+    .lightbox-prev {
+      left: 22px;
+    }
+
+    .lightbox-next {
+      right: 22px;
     }
 
     @media (max-width: 900px) {
@@ -374,6 +448,24 @@
 
       .archive-grid {
         column-count: 1;
+      }
+
+      .lightbox {
+        padding: 18px;
+      }
+
+      .lightbox-button {
+        width: 40px;
+        height: 40px;
+      }
+
+      .lightbox-prev {
+        left: 12px;
+      }
+
+      .lightbox-next,
+      .lightbox-close {
+        right: 12px;
       }
     }
   </style>
@@ -526,6 +618,12 @@
     </section>
 
   </main>
+  <div class="lightbox" data-lightbox aria-hidden="true" role="dialog" aria-label="Expanded photograph">
+    <button class="lightbox-button lightbox-close" type="button" data-lightbox-close aria-label="Close expanded photograph">&times;</button>
+    <button class="lightbox-button lightbox-prev" type="button" data-lightbox-prev aria-label="Previous photograph">&#8249;</button>
+    <img data-lightbox-image src="" alt="">
+    <button class="lightbox-button lightbox-next" type="button" data-lightbox-next aria-label="Next photograph">&#8250;</button>
+  </div>
   <script>
     const archiveGrid = document.querySelector("[data-complete-archive]");
     const archiveImages = Array.from({ length: 54 }, (_, index) => {
@@ -545,6 +643,71 @@
 
       figure.appendChild(image);
       archiveGrid.appendChild(figure);
+    });
+
+    const lightbox = document.querySelector("[data-lightbox]");
+    const lightboxImage = document.querySelector("[data-lightbox-image]");
+    const closeButton = document.querySelector("[data-lightbox-close]");
+    const prevButton = document.querySelector("[data-lightbox-prev]");
+    const nextButton = document.querySelector("[data-lightbox-next]");
+    let galleryImages = [];
+    let currentImageIndex = 0;
+
+    const refreshGalleryImages = () => {
+      galleryImages = Array.from(document.querySelectorAll(".hero-image img, .frame img, .archive-frame img"));
+    };
+
+    const showImage = (index) => {
+      if (!galleryImages.length) return;
+      currentImageIndex = (index + galleryImages.length) % galleryImages.length;
+      const image = galleryImages[currentImageIndex];
+      lightboxImage.src = image.currentSrc || image.src;
+      lightboxImage.alt = image.alt;
+    };
+
+    const openLightbox = (image) => {
+      refreshGalleryImages();
+      const index = galleryImages.indexOf(image);
+      showImage(index);
+      lightbox.classList.add("is-open");
+      lightbox.setAttribute("aria-hidden", "false");
+      document.body.style.overflow = "hidden";
+      closeButton.focus();
+    };
+
+    const closeLightbox = () => {
+      lightbox.classList.remove("is-open");
+      lightbox.setAttribute("aria-hidden", "true");
+      document.body.style.overflow = "";
+      lightboxImage.src = "";
+    };
+
+    const stepLightbox = (direction) => {
+      showImage(currentImageIndex + direction);
+    };
+
+    document.addEventListener("click", (event) => {
+      const image = event.target.closest(".hero-image img, .frame img, .archive-frame img");
+      if (image) {
+        openLightbox(image);
+      }
+    });
+
+    closeButton.addEventListener("click", closeLightbox);
+    prevButton.addEventListener("click", () => stepLightbox(-1));
+    nextButton.addEventListener("click", () => stepLightbox(1));
+
+    lightbox.addEventListener("click", (event) => {
+      if (event.target === lightbox) {
+        closeLightbox();
+      }
+    });
+
+    document.addEventListener("keydown", (event) => {
+      if (!lightbox.classList.contains("is-open")) return;
+      if (event.key === "Escape") closeLightbox();
+      if (event.key === "ArrowLeft") stepLightbox(-1);
+      if (event.key === "ArrowRight") stepLightbox(1);
     });
   </script>
 </body>
