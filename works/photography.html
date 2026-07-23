@@ -178,11 +178,12 @@
 
     .project-card {
       display: grid;
-      grid-template-columns: minmax(260px, 1.2fr) minmax(220px, 0.8fr);
+      grid-template-columns: minmax(0, 1fr) minmax(240px, 360px);
       gap: clamp(20px, 4vw, 48px);
       align-items: end;
       padding-top: 28px;
       border-top: 1px solid var(--line);
+      min-width: 0;
     }
 
     .project-image {
@@ -209,6 +210,15 @@
 
     .project-copy p {
       margin-bottom: 0;
+    }
+
+    .project-copy {
+      min-width: 0;
+    }
+
+    .project-copy .meta,
+    .project-copy p {
+      overflow-wrap: anywhere;
     }
 
     .project-status {
@@ -288,7 +298,7 @@
               <img src="../assets/works/photography/field-studies/web/field-studies-01.jpg" alt="Mountain terrain photographed as a field study">
             </div>
             <div class="project-copy">
-              <p class="meta">Photography / Field observation / Visual archive</p>
+              <p class="meta">Photography / Field Studies</p>
               <h3>Field Studies Archive</h3>
               <p>A growing archive of terrain, plants, urban edges, water, light, seasonal atmospheres, and quiet visual notes gathered through walking and returning.</p>
               <span class="project-status">Open project</span>
