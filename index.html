@@ -302,6 +302,10 @@
       padding-bottom: 2px;
     }
 
+    .work-copy h3 {
+      transition: color 180ms ease;
+    }
+
     .meta {
       margin-bottom: 14px;
       color: var(--moss);
@@ -314,6 +318,27 @@
     h3 {
       font-size: clamp(25px, 3vw, 42px);
       line-height: 1.05;
+    }
+
+    .work-cta {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      margin-top: 6px;
+      color: var(--moss);
+      font-size: 13px;
+      font-weight: 600;
+      letter-spacing: 0.03em;
+      transition: color 180ms ease, transform 180ms ease;
+    }
+
+    .work-card:hover .work-copy h3,
+    .work-card:hover .work-cta {
+      color: var(--moss);
+    }
+
+    .work-card:hover .work-cta {
+      transform: translateX(4px);
     }
 
     .work-copy p,
@@ -679,6 +704,7 @@
               <p class="meta">Work category 01</p>
               <h3>Landscape Design</h3>
               <p>A collection of open-space, park, garden, planting, and public landscape projects, including concept design, spatial narratives, and detailed project pages.</p>
+              <span class="work-cta">View projects →</span>
             </div>
           </a>
 
@@ -690,6 +716,7 @@
               <p class="meta">Work category 02</p>
               <h3>Ecology & Analysis</h3>
               <p>A collection of ecology-oriented projects and analytical studies, including biodiversity strategy, climate adaptation, environmental comfort, mapping, and GIS-based site research.</p>
+              <span class="work-cta">View projects →</span>
             </div>
           </a>
 
@@ -701,6 +728,7 @@
               <p class="meta">Work category 03</p>
               <h3>Photography & Field Studies</h3>
               <p>A visual archive of natural textures, urban edges, plants, atmospheres, and site observations, supporting a slower way of reading places before shaping them.</p>
+              <span class="work-cta">View projects →</span>
             </div>
           </a>
         </div>
