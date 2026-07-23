@@ -4,33 +4,378 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Field Studies Archive | J.Sun</title>
-  <meta name="description" content="Photography and field studies archive by J.Sun.">
+  <meta name="description" content="Photography and field studies archive by J.Sun, documenting terrain, plants, urban edges, light, and atmosphere.">
   <style>
-    :root { --paper: #f6f1e8; --warm-white: #fbfaf6; --ink: #22211d; --muted: #6f6b61; --line: #d8d0c2; --moss: #63705a; --sage: #d7d9ca; --sand: #e8deca; --shadow: 0 18px 50px rgba(34, 33, 29, 0.08); }
-    * { box-sizing: border-box; }
-    body { margin: 0; color: var(--ink); background: var(--paper); font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; line-height: 1.55; }
-    a { color: inherit; text-decoration: none; }
-    img { display: block; max-width: 100%; }
-    .page { padding: 42px clamp(22px, 5vw, 86px) 72px; }
-    .topbar { display: flex; justify-content: space-between; gap: 18px; align-items: center; margin-bottom: 56px; }
-    .eyebrow, .section-number, .meta { color: var(--moss); font-size: 12px; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; }
-    h1, h2, h3 { margin: 0; font-family: Georgia, "Times New Roman", serif; font-weight: 400; letter-spacing: 0; }
-    h1 { max-width: 12ch; font-size: clamp(52px, 8vw, 112px); line-height: 0.94; }
-    h2 { font-size: clamp(32px, 4vw, 62px); line-height: 1; }
-    p { color: var(--muted); font-size: 15px; }
-    .pill { display: inline-flex; min-height: 44px; align-items: center; padding: 12px 18px; border: 1px solid var(--line); border-radius: 999px; font-size: 15px; white-space: nowrap; }
-    .hero { display: grid; grid-template-columns: minmax(260px, 0.68fr) minmax(520px, 1.32fr); gap: clamp(32px, 5vw, 78px); align-items: center; min-height: clamp(460px, 54vh, 620px); padding-bottom: 72px; border-bottom: 1px solid var(--line); }
-    .hero-image { width: 100%; min-height: clamp(360px, 34vw, 520px); aspect-ratio: 16 / 10; overflow: hidden; background: var(--sand); box-shadow: var(--shadow); }
-    .hero-image img { width: 100%; height: 100%; object-fit: cover; object-position: center 52%; filter: saturate(0.88) contrast(0.96); }
-    .section { padding: 72px 0; border-bottom: 1px solid var(--line); }
-    .section:last-child { border-bottom: 0; padding-bottom: 0; }
-    .section-header { display: grid; grid-template-columns: 120px 1fr; gap: clamp(18px, 4vw, 52px); margin-bottom: 28px; }
-    .text-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 18px; }
-    .photo-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 18px; }
-    .image-slot { min-height: 360px; display: flex; align-items: flex-end; padding: 18px; border-top: 1px solid var(--line); background: linear-gradient(135deg, #dad5c9, #b6c0b0); color: rgba(34, 33, 29, 0.52); font-family: Georgia, "Times New Roman", serif; font-size: 26px; }
-    .quiet-section .section-header { margin-bottom: 18px; }
-    .quiet-section .section-header h2 { display: none; }
-    @media (max-width: 800px) { .topbar, .hero, .section-header, .text-grid, .photo-grid { display: grid; grid-template-columns: 1fr; } }
+    :root {
+      --paper: #f6f1e8;
+      --warm-white: #fbfaf6;
+      --ink: #22211d;
+      --muted: #6f6b61;
+      --line: #d8d0c2;
+      --moss: #63705a;
+      --sage: #d7d9ca;
+      --sand: #e8deca;
+      --shadow: 0 18px 50px rgba(34, 33, 29, 0.08);
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      color: var(--ink);
+      background: var(--paper);
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      line-height: 1.55;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    img {
+      display: block;
+      max-width: 100%;
+    }
+
+    .page {
+      padding: 42px clamp(22px, 5vw, 86px) 72px;
+    }
+
+    .topbar {
+      display: flex;
+      justify-content: space-between;
+      gap: 18px;
+      align-items: center;
+      margin-bottom: 56px;
+    }
+
+    .eyebrow,
+    .section-number,
+    .meta {
+      color: var(--moss);
+      font-size: 12px;
+      font-weight: 600;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+
+    h1,
+    h2,
+    h3 {
+      margin: 0;
+      font-family: Georgia, "Times New Roman", serif;
+      font-weight: 400;
+      letter-spacing: 0;
+    }
+
+    h1 {
+      max-width: 12ch;
+      font-size: clamp(52px, 8vw, 112px);
+      line-height: 0.94;
+    }
+
+    h2 {
+      font-size: clamp(32px, 4vw, 62px);
+      line-height: 1;
+    }
+
+    h3 {
+      font-family: Inter, ui-sans-serif, system-ui, sans-serif;
+      font-size: 18px;
+      font-weight: 500;
+      line-height: 1.25;
+    }
+
+    p {
+      color: var(--muted);
+      font-size: 15px;
+    }
+
+    .pill {
+      display: inline-flex;
+      min-height: 44px;
+      align-items: center;
+      padding: 12px 18px;
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      font-size: 15px;
+      white-space: nowrap;
+      transition: background 180ms ease, border-color 180ms ease, transform 180ms ease;
+    }
+
+    .pill:hover {
+      background: var(--sand);
+      border-color: var(--moss);
+      transform: translateY(-1px);
+    }
+
+    .hero {
+      display: grid;
+      grid-template-columns: minmax(260px, 0.62fr) minmax(520px, 1.38fr);
+      gap: clamp(32px, 5vw, 78px);
+      align-items: end;
+      min-height: clamp(520px, 62vh, 720px);
+      padding-bottom: 72px;
+      border-bottom: 1px solid var(--line);
+    }
+
+    .hero-copy {
+      padding-bottom: 8px;
+    }
+
+    .hero-copy p:last-child {
+      max-width: 420px;
+      margin-top: 24px;
+    }
+
+    .hero-image {
+      width: 100%;
+      min-height: clamp(380px, 44vw, 680px);
+      aspect-ratio: 16 / 10;
+      overflow: hidden;
+      background: var(--sand);
+      box-shadow: var(--shadow);
+    }
+
+    .hero-image img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center 52%;
+      filter: saturate(0.88) contrast(0.96);
+    }
+
+    .section {
+      padding: 72px 0;
+      border-bottom: 1px solid var(--line);
+    }
+
+    .section:last-child {
+      border-bottom: 0;
+      padding-bottom: 0;
+    }
+
+    .section-header {
+      display: grid;
+      grid-template-columns: 120px 1fr;
+      gap: clamp(18px, 4vw, 52px);
+      margin-bottom: 28px;
+      align-items: baseline;
+    }
+
+    .text-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 18px;
+    }
+
+    .study-notes {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 18px;
+      margin-top: 36px;
+    }
+
+    .note {
+      padding-top: 18px;
+      border-top: 1px solid var(--line);
+    }
+
+    .note p {
+      margin-bottom: 0;
+    }
+
+    .photo-set {
+      display: grid;
+      gap: 18px;
+    }
+
+    .photo-set + .photo-set {
+      margin-top: 44px;
+    }
+
+    .photo-set-header {
+      display: grid;
+      grid-template-columns: minmax(120px, 0.24fr) 1fr;
+      gap: 18px;
+      align-items: baseline;
+      padding-top: 18px;
+      border-top: 1px solid var(--line);
+    }
+
+    .photo-set-header p {
+      max-width: 660px;
+      margin: 0;
+    }
+
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(12, minmax(0, 1fr));
+      gap: 18px;
+    }
+
+    .frame {
+      min-height: 300px;
+      overflow: hidden;
+      background: var(--sand);
+      box-shadow: var(--shadow);
+    }
+
+    .frame img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      filter: saturate(0.82) contrast(0.98);
+      transition: transform 700ms ease, filter 700ms ease;
+    }
+
+    .frame:hover img {
+      transform: scale(1.018);
+      filter: saturate(0.95) contrast(1);
+    }
+
+    .wide {
+      grid-column: span 8;
+      aspect-ratio: 16 / 9;
+    }
+
+    .medium {
+      grid-column: span 6;
+      aspect-ratio: 4 / 3;
+    }
+
+    .square {
+      grid-column: span 4;
+      aspect-ratio: 1;
+    }
+
+    .tall {
+      grid-column: span 4;
+      aspect-ratio: 3 / 4;
+    }
+
+    .full {
+      grid-column: 1 / -1;
+      aspect-ratio: 16 / 8;
+    }
+
+    .align-top img {
+      object-position: center 22%;
+    }
+
+    .align-low img {
+      object-position: center 70%;
+    }
+
+    .archive-intro {
+      max-width: 720px;
+      margin: -8px 0 34px 172px;
+    }
+
+    .archive-grid {
+      column-count: 4;
+      column-gap: 18px;
+    }
+
+    .archive-frame {
+      display: inline-block;
+      width: 100%;
+      margin: 0 0 18px;
+      overflow: hidden;
+      background: var(--sand);
+      box-shadow: var(--shadow);
+      break-inside: avoid;
+    }
+
+    .archive-frame img {
+      width: 100%;
+      height: auto;
+      filter: saturate(0.82) contrast(0.98);
+      transition: transform 700ms ease, filter 700ms ease;
+    }
+
+    .archive-frame:hover img {
+      transform: scale(1.018);
+      filter: saturate(0.95) contrast(1);
+    }
+
+    @media (max-width: 900px) {
+      .topbar,
+      .hero,
+      .section-header,
+      .text-grid,
+      .study-notes,
+      .photo-set-header {
+        display: grid;
+        grid-template-columns: 1fr;
+      }
+
+      .hero {
+        min-height: 0;
+      }
+
+      .gallery {
+        grid-template-columns: repeat(6, minmax(0, 1fr));
+      }
+
+      .wide,
+      .medium,
+      .square,
+      .tall,
+      .full {
+        grid-column: span 6;
+      }
+
+      .frame {
+        min-height: 280px;
+      }
+
+      .archive-intro {
+        margin-left: 0;
+      }
+
+      .archive-grid {
+        column-count: 2;
+      }
+    }
+
+    @media (max-width: 560px) {
+      .page {
+        padding: 32px 22px 52px;
+      }
+
+      .topbar {
+        margin-bottom: 42px;
+      }
+
+      h1 {
+        font-size: 58px;
+      }
+
+      .section {
+        padding: 52px 0;
+      }
+
+      .hero-image,
+      .full,
+      .wide,
+      .medium,
+      .square,
+      .tall {
+        aspect-ratio: 4 / 5;
+      }
+
+      .archive-grid {
+        column-count: 1;
+      }
+    }
   </style>
 </head>
 <body>
@@ -39,39 +384,168 @@
       <a class="pill" href="../photography.html">Back to Photography</a>
       <a class="pill" href="../../index.html#works">Back to homepage</a>
     </nav>
+
     <section class="hero">
-      <div>
+      <div class="hero-copy">
         <p class="eyebrow">Photography / Field observation</p>
         <h1>Field Studies Archive</h1>
+        <p>A photographic notebook of terrain, plants, urban edges, light conditions, and atmospheres gathered through walking, observing, and returning to places over time.</p>
       </div>
       <figure class="hero-image">
-        <img src="https://helpfuldisease.github.io/assets/works/photography-cover.jpg" alt="Field studies archive cover">
+        <img src="../../assets/works/photography/field-studies/web/field-studies-02.jpg" alt="People walking across a mountain path with snow and forest shadows">
       </figure>
     </section>
+
     <section class="section">
       <div class="section-header">
         <span class="section-number">Overview</span>
-        <h2>Plants, textures, urban edges, light, and atmosphere.</h2>
+        <h2>Photography as a way of noticing landscape before designing it.</h2>
       </div>
       <div class="text-grid">
-        <p>A visual archive gathered through walking, observing, documenting, and returning to places over time.</p>
-        <p>This page can later become a quiet photographic sequence, with image groups arranged by theme, location, or atmosphere.</p>
+        <p>This archive sits beside the design work rather than behind it. The images record slopes, surfaces, edges, temporary weather, neglected corners, and small ecological details that can later become spatial questions.</p>
+        <p>The sequence is intentionally quiet: part travel diary, part visual research, part collection of field notes for landscape, ecology, and atmosphere.</p>
+      </div>
+      <div class="study-notes">
+        <div class="note">
+          <p class="meta">Terrain</p>
+          <p>Topography, paths, rock, water, and seasonal ground conditions.</p>
+        </div>
+        <div class="note">
+          <p class="meta">Edges</p>
+          <p>Urban fragments, thresholds, infrastructures, and everyday transitions.</p>
+        </div>
+        <div class="note">
+          <p class="meta">Surfaces</p>
+          <p>Plants, bark, soil, walls, traces, and material weathering.</p>
+        </div>
+        <div class="note">
+          <p class="meta">Atmosphere</p>
+          <p>Light, fog, exposure, color temperature, and the pace of looking.</p>
+        </div>
       </div>
     </section>
-    <section class="section quiet-section">
+
+    <section class="section">
       <div class="section-header">
         <span class="section-number">Images</span>
-        <h2>Photo sequence slots.</h2>
+        <h2>Selected field notes.</h2>
       </div>
-      <div class="photo-grid">
-        <div class="image-slot">01</div>
-        <div class="image-slot">02</div>
-        <div class="image-slot">03</div>
-        <div class="image-slot">04</div>
-        <div class="image-slot">05</div>
-        <div class="image-slot">06</div>
+
+      <div class="photo-set">
+        <div class="photo-set-header">
+          <h3>Open Terrain</h3>
+          <p>Large landscape conditions, paths, slopes, and seasonal thresholds where movement makes the site readable.</p>
+        </div>
+        <div class="gallery">
+          <figure class="frame full">
+            <img src="../../assets/works/photography/field-studies/web/field-studies-01.jpg" alt="Rocky mountain terrain with muted autumn vegetation">
+          </figure>
+          <figure class="frame wide">
+            <img src="../../assets/works/photography/field-studies/web/field-studies-03.jpg" alt="Wide mountain landscape with dark forest and open ground">
+          </figure>
+          <figure class="frame tall">
+            <img src="../../assets/works/photography/field-studies/web/field-studies-04.jpg" alt="Vertical film photograph of a dim urban or landscape edge">
+          </figure>
+        </div>
+      </div>
+
+      <div class="photo-set">
+        <div class="photo-set-header">
+          <h3>Urban Edges</h3>
+          <p>Everyday infrastructures and soft boundaries: streets, lights, walls, and moments where the city becomes atmospheric.</p>
+        </div>
+        <div class="gallery">
+          <figure class="frame wide">
+            <img src="../../assets/works/photography/field-studies/web/field-studies-05.jpg" alt="Night bus and street lights photographed on film">
+          </figure>
+          <figure class="frame square">
+            <img src="../../assets/works/photography/field-studies/web/field-studies-06.jpg" alt="Square field study photograph of an urban surface">
+          </figure>
+          <figure class="frame medium">
+            <img src="../../assets/works/photography/field-studies/web/field-studies-07.jpg" alt="Film photograph of a street or urban edge">
+          </figure>
+          <figure class="frame medium">
+            <img src="../../assets/works/photography/field-studies/web/field-studies-08.jpg" alt="Film photograph of light and urban atmosphere">
+          </figure>
+        </div>
+      </div>
+
+      <div class="photo-set">
+        <div class="photo-set-header">
+          <h3>Plants And Surfaces</h3>
+          <p>Close observations of vegetation, forest structure, ground texture, and the small surfaces that make a place specific.</p>
+        </div>
+        <div class="gallery">
+          <figure class="frame tall">
+            <img src="../../assets/works/photography/field-studies/web/field-studies-09.jpg" alt="Black and white forest path with layered tree trunks">
+          </figure>
+          <figure class="frame medium">
+            <img src="../../assets/works/photography/field-studies/web/field-studies-10.jpg" alt="Film photograph of vegetation and landscape texture">
+          </figure>
+          <figure class="frame square">
+            <img src="../../assets/works/photography/field-studies/web/field-studies-11.jpg" alt="Square photograph of field texture and natural detail">
+          </figure>
+          <figure class="frame medium">
+            <img src="../../assets/works/photography/field-studies/web/field-studies-12.jpg" alt="Film photograph of plants and ground surface">
+          </figure>
+          <figure class="frame medium">
+            <img src="../../assets/works/photography/field-studies/web/field-studies-13.jpg" alt="Film photograph of landscape surface and vegetation">
+          </figure>
+        </div>
+      </div>
+
+      <div class="photo-set">
+        <div class="photo-set-header">
+          <h3>Light And Weather</h3>
+          <p>Images where atmosphere becomes the main subject: exposure, fog, snow, dimness, and the changing weight of color.</p>
+        </div>
+        <div class="gallery">
+          <figure class="frame wide">
+            <img src="../../assets/works/photography/field-studies/web/field-studies-14.jpg" alt="Wide landscape field study with soft natural light">
+          </figure>
+          <figure class="frame tall align-top">
+            <img src="../../assets/works/photography/field-studies/web/field-studies-15.jpg" alt="Vertical film photograph of landscape atmosphere">
+          </figure>
+          <figure class="frame square">
+            <img src="../../assets/works/photography/field-studies/web/field-studies-16.jpg" alt="Square atmospheric field study photograph">
+          </figure>
+          <figure class="frame medium">
+            <img src="../../assets/works/photography/field-studies/web/field-studies-17.jpg" alt="Film photograph of landscape light and weather">
+          </figure>
+        </div>
       </div>
     </section>
+
+    <section class="section">
+      <div class="section-header">
+        <span class="section-number">Complete archive</span>
+        <h2>All field photographs currently in the folder.</h2>
+      </div>
+      <p class="archive-intro">This full sequence includes all 54 images from the current field-studies image folder. The curated sets above remain as an introduction; this grid keeps the complete archive visible for browsing and future editing.</p>
+      <div class="archive-grid" data-complete-archive></div>
+    </section>
+
   </main>
+  <script>
+    const archiveGrid = document.querySelector("[data-complete-archive]");
+    const archiveImages = Array.from({ length: 54 }, (_, index) => {
+      const number = String(index + 1).padStart(2, "0");
+      return `../../assets/works/photography/field-studies/web/archive-${number}.jpg`;
+    });
+
+    archiveImages.forEach((src, index) => {
+      const figure = document.createElement("figure");
+      figure.className = "archive-frame";
+
+      const image = document.createElement("img");
+      image.src = src;
+      image.alt = `Field Studies Archive photograph ${index + 1}`;
+      image.loading = "lazy";
+      image.decoding = "async";
+
+      figure.appendChild(image);
+      archiveGrid.appendChild(figure);
+    });
+  </script>
 </body>
 </html>
