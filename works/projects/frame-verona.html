@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>FRAME | J.Sun</title>
-  <meta name="description" content="FRAME, a post-industrial landscape design project in Verona by J.Sun.">
+  <meta name="description" content="FRAME, a post-industrial landscape design project for Verona's former Porta Nuova freight yard by J.Sun.">
   <style>
     :root { --paper: #f6f1e8; --warm-white: #fbfaf6; --ink: #22211d; --muted: #6f6b61; --line: #d8d0c2; --moss: #63705a; --sage: #d7d9ca; --sand: #e8deca; --shadow: 0 18px 50px rgba(34, 33, 29, 0.08); }
     * { box-sizing: border-box; }
@@ -22,7 +22,7 @@
     .pill { display: inline-flex; min-height: 44px; align-items: center; padding: 12px 18px; border: 1px solid var(--line); border-radius: 999px; font-size: 15px; white-space: nowrap; }
     .hero { display: grid; grid-template-columns: minmax(260px, 0.68fr) minmax(520px, 1.32fr); gap: clamp(32px, 5vw, 78px); align-items: center; min-height: clamp(460px, 54vh, 620px); padding-bottom: 72px; border-bottom: 1px solid var(--line); }
     .hero-image { width: 100%; min-height: clamp(360px, 34vw, 520px); aspect-ratio: 16 / 10; overflow: hidden; background: var(--sand); box-shadow: var(--shadow); }
-    .hero-image img { width: 100%; height: 100%; object-fit: cover; filter: saturate(0.88) contrast(0.96); }
+    .hero-image img { width: 100%; height: 100%; object-fit: cover; filter: saturate(0.94) contrast(0.98); }
     .section { padding: 72px 0; border-bottom: 1px solid var(--line); }
     .section:last-child { border-bottom: 0; padding-bottom: 0; }
     .section-header { display: grid; grid-template-columns: 120px 1fr; gap: clamp(18px, 4vw, 52px); margin-bottom: 28px; }
@@ -31,11 +31,16 @@
     .project-facts { display: grid; gap: 12px; align-self: start; padding-top: 18px; border-top: 1px solid var(--line); }
     .project-facts span { color: var(--muted); font-size: 15px; }
     .project-facts strong { display: block; color: var(--ink); font-size: 13px; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; }
-    .image-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 18px; }
-    .image-slot { min-height: 320px; display: flex; align-items: flex-end; padding: 18px; border-top: 1px solid var(--line); background: linear-gradient(135deg, var(--sage), var(--sand)); color: rgba(34, 33, 29, 0.52); font-family: Georgia, "Times New Roman", serif; font-size: 26px; }
+    .info-grid { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 18px; }
+    .info-card { padding-top: 18px; border-top: 1px solid var(--line); }
+    .image-stack { display: grid; gap: 34px; justify-items: center; }
+    .image-figure { margin: 0; width: min(100%, 1120px); background: var(--warm-white); box-shadow: var(--shadow); }
+    .image-figure img { width: 100%; height: auto; filter: saturate(0.94) contrast(0.99); }
+    .image-figure figcaption { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
+    .wide-figure { width: min(100%, 1240px); }
     .quiet-section .section-header { margin-bottom: 18px; }
     .quiet-section .section-header h2 { display: none; }
-    @media (max-width: 800px) { .topbar, .hero, .section-header, .text-grid, .image-grid { display: grid; grid-template-columns: 1fr; } .hero { min-height: auto; } .hero-image { min-height: 260px; } }
+    @media (max-width: 800px) { .topbar, .hero, .section-header, .text-grid, .info-grid { display: grid; grid-template-columns: 1fr; } .hero { min-height: auto; } .hero-image { min-height: 260px; } }
   </style>
 </head>
 <body>
@@ -46,11 +51,11 @@
     </nav>
     <section class="hero">
       <div>
-        <p class="eyebrow">Post-industrial landscape</p>
+        <p class="eyebrow">Post-industrial landscape / Urban wilderness</p>
         <h1>FRAME</h1>
       </div>
       <figure class="hero-image">
-        <img src="https://helpfuldisease.github.io/assets/works/landscape-cover.jpg" alt="FRAME Verona project cover">
+        <img src="../../assets/works/landscape/frame-verona/frame-cover-urban-wilderness.jpg" alt="FRAME urban wilderness visualization in Verona">
       </figure>
     </section>
     <section class="section">
@@ -60,27 +65,62 @@
       </div>
       <div class="text-grid">
         <div class="project-description">
-          <p>A post-industrial landscape design for the former Porta Nuova freight yard in Verona, transforming railway leftovers into a connected public landscape.</p>
-          <p>The proposal uses a legible spatial frame to link green corridors, public amenities, railway memory, and spontaneous urban wilderness, creating a gradual transition between civic activity and self-developing vegetation.</p>
+          <p>FRAME is a post-industrial landscape design for the former Porta Nuova rail freight yard in Verona, transforming an almost 50-hectare railway site into a connected public landscape.</p>
+          <p>The proposal preserves the site's spontaneous wilderness and railway memory while introducing a clear spatial frame for public life, ecological continuity, cultural reuse, and new east-west and north-south connections.</p>
         </div>
         <div class="project-facts" aria-label="Project facts">
+          <span><strong>Original title</strong>FRAME</span>
           <span><strong>Location</strong>Verona, Italy</span>
           <span><strong>Year</strong>2021</span>
-          <span><strong>Scale</strong>Approx. 50 ha</span>
-          <span><strong>Focus</strong>Post-industrial reuse, public space, green corridor, urban wilderness</span>
+          <span><strong>Scale</strong>Nearly 50 ha</span>
+          <span><strong>Type</strong>Post-industrial landscape design</span>
+          <span><strong>Context</strong>Former Porta Nuova rail freight yard</span>
+          <span><strong>Focus</strong>Connectivity, railway reuse, public amenities, green corridor, urban wilderness</span>
         </div>
       </div>
     </section>
     <section class="section quiet-section">
       <div class="section-header">
-        <span class="section-number">Images</span>
-        <h2>Material to add.</h2>
+        <span class="section-number">Focus</span>
+        <h2>Design focus</h2>
       </div>
-      <div class="image-grid">
-        <div class="image-slot">Plan</div>
-        <div class="image-slot">Strategy</div>
-        <div class="image-slot">Model</div>
-        <div class="image-slot">Visualisation</div>
+      <div class="info-grid">
+        <article class="info-card"><h3>Spatial Frame</h3><p>A legible landscape structure that organizes movement, edges, and new public programs.</p></article>
+        <article class="info-card"><h3>Urban Wildness</h3><p>Self-developing vegetation is kept as the site's identity and ecological foundation.</p></article>
+        <article class="info-card"><h3>Railway Memory</h3><p>Existing tracks, relics, and linear traces are reused as spatial and cultural anchors.</p></article>
+        <article class="info-card"><h3>Public Connectivity</h3><p>The former barrier becomes a shared open-space link between districts and everyday users.</p></article>
+      </div>
+    </section>
+    <section class="section quiet-section">
+      <div class="section-header">
+        <span class="section-number">Materials</span>
+        <h2>Materials</h2>
+      </div>
+      <div class="image-stack">
+        <figure class="image-figure wide-figure">
+          <img src="../../assets/works/landscape/frame-verona/frame-strategy-connectivity.jpg" alt="FRAME problem, aim, regional strategy, and connectivity diagrams">
+          <figcaption>Strategy and connectivity diagrams</figcaption>
+        </figure>
+        <figure class="image-figure wide-figure">
+          <img src="../../assets/works/landscape/frame-verona/frame-site-structure.jpg" alt="FRAME site structure plan and design principles">
+          <figcaption>Site structure plan and design principles</figcaption>
+        </figure>
+        <figure class="image-figure wide-figure">
+          <img src="../../assets/works/landscape/frame-verona/frame-urban-area-detail-plan.jpg" alt="Enhanced technical plan for the urban area and lake edge">
+          <figcaption>Urban area technical plan</figcaption>
+        </figure>
+        <figure class="image-figure wide-figure">
+          <img src="../../assets/works/landscape/frame-verona/frame-urban-area-visualisation.jpg" alt="FRAME urban area visualization with lake edge and public space">
+          <figcaption>Urban area visualization</figcaption>
+        </figure>
+        <figure class="image-figure wide-figure">
+          <img src="../../assets/works/landscape/frame-verona/frame-urban-wilderness-plan.jpg" alt="FRAME urban wilderness plan with railway tracks and landscape frame">
+          <figcaption>Urban wilderness plan</figcaption>
+        </figure>
+        <figure class="image-figure wide-figure">
+          <img src="../../assets/works/landscape/frame-verona/frame-model.jpg" alt="Physical model photo of the FRAME project">
+          <figcaption>Physical model photo</figcaption>
+        </figure>
       </div>
     </section>
   </main>
