@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>The Power of No Design | J.Sun</title>
-  <meta name="description" content="The Power of No Design, Waiting lands lab by J.Sun.">
+  <meta name="description" content="The Power of No Design, a waiting lands research project by J.Sun.">
   <style>
     :root { --paper: #f6f1e8; --warm-white: #fbfaf6; --ink: #22211d; --muted: #6f6b61; --line: #d8d0c2; --moss: #63705a; --sage: #d7d9ca; --sand: #e8deca; --shadow: 0 18px 50px rgba(34, 33, 29, 0.08); }
     * { box-sizing: border-box; }
@@ -22,15 +22,26 @@
     .pill { display: inline-flex; min-height: 44px; align-items: center; padding: 12px 18px; border: 1px solid var(--line); border-radius: 999px; font-size: 15px; white-space: nowrap; }
     .hero { display: grid; grid-template-columns: minmax(260px, 0.68fr) minmax(520px, 1.32fr); gap: clamp(32px, 5vw, 78px); align-items: center; min-height: clamp(460px, 54vh, 620px); padding-bottom: 72px; border-bottom: 1px solid var(--line); }
     .hero-image { width: 100%; min-height: clamp(360px, 34vw, 520px); aspect-ratio: 16 / 10; overflow: hidden; background: var(--sand); box-shadow: var(--shadow); }
-    .hero-image img { width: 100%; height: 100%; object-fit: cover; filter: saturate(0.88) contrast(0.96); }
+    .hero-image img { width: 100%; height: 100%; object-fit: cover; object-position: center 42%; filter: saturate(0.86) contrast(0.96); }
     .section { padding: 72px 0; border-bottom: 1px solid var(--line); }
     .section:last-child { border-bottom: 0; padding-bottom: 0; }
     .section-header { display: grid; grid-template-columns: 120px 1fr; gap: clamp(18px, 4vw, 52px); margin-bottom: 28px; }
-    .text-grid, .image-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 18px; }
-    .image-slot { min-height: 320px; display: flex; align-items: flex-end; padding: 18px; border-top: 1px solid var(--line); background: linear-gradient(135deg, #d7d9ca, #e8deca); color: rgba(34, 33, 29, 0.52); font-family: Georgia, "Times New Roman", serif; font-size: 26px; }
+    .text-grid { display: grid; grid-template-columns: minmax(0, 1fr) minmax(260px, 0.5fr); gap: clamp(18px, 4vw, 52px); }
+    .project-description { max-width: 760px; }
+    .project-facts { display: grid; gap: 12px; align-self: start; padding-top: 18px; border-top: 1px solid var(--line); }
+    .project-facts span { color: var(--muted); font-size: 15px; }
+    .project-facts strong { display: block; color: var(--ink); font-size: 13px; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; }
+    .info-grid { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 18px; }
+    .info-card { padding-top: 18px; border-top: 1px solid var(--line); }
+    .image-stack { display: grid; gap: 34px; justify-items: center; }
+    .image-figure { margin: 0; width: min(100%, 1120px); background: var(--warm-white); box-shadow: var(--shadow); }
+    .image-figure img { width: 100%; height: auto; filter: saturate(0.92) contrast(0.98); }
+    .board-figure { padding: clamp(10px, 1.4vw, 18px); }
+    .value-figure { width: min(100%, 1040px); padding: clamp(10px, 1.4vw, 18px); }
+    .image-figure figcaption { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
     .quiet-section .section-header { margin-bottom: 18px; }
     .quiet-section .section-header h2 { display: none; }
-    @media (max-width: 800px) { .topbar, .hero, .section-header, .text-grid, .image-grid { display: grid; grid-template-columns: 1fr; } .hero { min-height: auto; } .hero-image { min-height: 260px; } }
+    @media (max-width: 800px) { .topbar, .hero, .section-header, .text-grid, .info-grid { display: grid; grid-template-columns: 1fr; } .hero { min-height: auto; } .hero-image { min-height: 260px; } .board-figure, .value-figure { padding: 8px; } }
   </style>
 </head>
 <body>
@@ -45,7 +56,7 @@
         <h1>The Power of No Design</h1>
       </div>
       <figure class="hero-image">
-        <img src="https://helpfuldisease.github.io/assets/works/ecology-cover.jpg" alt="The Power of No Design cover">
+        <img src="../../assets/works/ecology/the-power-of-no-design/the-power-of-no-design-cover.jpg" alt="Aerial view of the waiting lands site in Nuremberg">
       </figure>
     </section>
     <section class="section">
@@ -54,20 +65,76 @@
         <h2>A prediction about the power of nature.</h2>
       </div>
       <div class="text-grid">
-        <p>A waiting-lands research project for Nuremberg, asking what happens when unused urban land is observed as an active ecological process rather than treated as an empty site.</p>
-        <p>The work follows natural succession over time and translates survey, mapping, and scenario thinking into low-intervention landscape strategies.</p>
+        <div class="project-description">
+          <p>A campus-scale research and landscape strategy for waiting lands in Nuremberg, developed around the question of what temporary open ground can become before, during, and after long-term construction.</p>
+          <p>The project treats vacant urban land as an active ecological process rather than an empty reserve. Through time-based scenarios, succession studies, and low-intervention landscape proposals, it explores how meanwhile landscapes can support daily use, climate adaptation, habitat formation, and a slower relationship between people and nature.</p>
+        </div>
+        <div class="project-facts" aria-label="Project facts">
+          <span><strong>Location</strong>Nuremberg, Germany</span>
+          <span><strong>Year</strong>2021</span>
+          <span><strong>Type</strong>Landscape research, ecological strategy</span>
+          <span><strong>Focus</strong>Waiting lands, temporary landscape, natural succession, urban ecology</span>
+        </div>
+      </div>
+    </section>
+    <section class="section">
+      <div class="section-header">
+        <span class="section-number">Focus</span>
+        <h2>Leaving space for ecological time.</h2>
+      </div>
+      <div class="info-grid">
+        <article class="info-card"><h3>Phased Campus Growth</h3><p>Mapping construction stages and identifying temporary open grounds between development phases.</p></article>
+        <article class="info-card"><h3>Meanwhile Use</h3><p>Transforming idle land into informal gardens, paths, gathering spaces, and low-cost public landscapes.</p></article>
+        <article class="info-card"><h3>Ecological Succession</h3><p>Reading spontaneous vegetation as a design resource for shade, soil improvement, and microclimate regulation.</p></article>
+        <article class="info-card"><h3>Shared Habitat</h3><p>Linking human use with habitats for insects, birds, small animals, and plant communities.</p></article>
       </div>
     </section>
     <section class="section quiet-section">
       <div class="section-header">
-        <span class="section-number">Images</span>
-        <h2>Project material slots.</h2>
+        <span class="section-number">Values</span>
+        <h2>Values</h2>
       </div>
-      <div class="image-grid">
-        <div class="image-slot">Observation</div>
-        <div class="image-slot">Process</div>
-        <div class="image-slot">Scenario</div>
-        <div class="image-slot">Narrative</div>
+      <div class="image-stack">
+        <figure class="image-figure value-figure">
+          <img src="../../assets/works/ecology/the-power-of-no-design/the-power-of-no-design-values-01-timeline-montage-visual.jpg" alt="Timeline montage of waiting land transformation">
+          <figcaption>Timeline montage of waiting land transformation</figcaption>
+        </figure>
+        <figure class="image-figure value-figure">
+          <img src="../../assets/works/ecology/the-power-of-no-design/the-power-of-no-design-values-02-nature-power-visual.jpg" alt="Nature power and land value analysis diagrams">
+          <figcaption>Nature power and land value analysis diagrams</figcaption>
+        </figure>
+        <figure class="image-figure value-figure">
+          <img src="../../assets/works/ecology/the-power-of-no-design/the-power-of-no-design-values-03-ecological-benefits-visual.jpg" alt="Ecological benefits for water, plants, and habitat networks">
+          <figcaption>Ecological benefits for water, plants, and habitat networks</figcaption>
+        </figure>
+      </div>
+    </section>
+    <section class="section quiet-section">
+      <div class="section-header">
+        <span class="section-number">Process</span>
+        <h2>Process</h2>
+      </div>
+      <div class="image-stack">
+        <figure class="image-figure board-figure">
+          <img src="../../assets/works/ecology/the-power-of-no-design/the-power-of-no-design-process-01-campus-framework.jpg" alt="Campus framework and temporary landscape stage 01">
+          <figcaption>Campus framework and temporary landscape stage 01</figcaption>
+        </figure>
+        <figure class="image-figure board-figure">
+          <img src="../../assets/works/ecology/the-power-of-no-design/the-power-of-no-design-process-02-temporary-landscape.jpg" alt="Temporary landscape stage 02">
+          <figcaption>Temporary landscape stage 02</figcaption>
+        </figure>
+        <figure class="image-figure board-figure">
+          <img src="../../assets/works/ecology/the-power-of-no-design/the-power-of-no-design-process-03-adaptive-open-ground.jpg" alt="Adaptive open ground stage 03">
+          <figcaption>Adaptive open ground stage 03</figcaption>
+        </figure>
+        <figure class="image-figure board-figure">
+          <img src="../../assets/works/ecology/the-power-of-no-design/the-power-of-no-design-process-04-meanwhile-landscape.jpg" alt="Meanwhile landscape stage 04">
+          <figcaption>Meanwhile landscape stage 04</figcaption>
+        </figure>
+        <figure class="image-figure board-figure">
+          <img src="../../assets/works/ecology/the-power-of-no-design/the-power-of-no-design-process-05-courtyard-prototype.jpg" alt="Courtyard prototype stage 05">
+          <figcaption>Courtyard prototype stage 05</figcaption>
+        </figure>
       </div>
     </section>
   </main>
